@@ -49,7 +49,7 @@ STORED AS ORC;
 1. Create a managed ORC table (**not external**) that must have the same schema as the external table created above (`${username}_nyc_drivers_ext`) but with:
    1. The `_ext` prefix removed from the name: `${username}_nyc_drivers`
    2. The column `name` devided into `first_name` and `last_name`
-   3. The columne `location` renamed as `address` (because `LOCATION` is a Hive keyword)
+   3. The column `location` renamed as `address` (because `LOCATION` is a Hive keyword)
    4. The column `certified` as a `BOOLEAN`
 2. Check that your table was created using the HDFS CLI at `/warehouse/tablespace/managed/hive/ece_2020_fall_bda_1.db/$USER_nyc_drivers` (should be empty)
 
@@ -57,7 +57,7 @@ STORED AS ORC;
 
 Now we want to populate our ORC table from our CSV table. Using the [Hive Data Manipulation Language](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DML):
 
-1. Write a statement to insert data to the ORC table by applying 2 transformations (check the available [HiveQL string functions](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF#LanguageManualUDF-StringFunctions)):
+1. Write a statement to insert data to the ORC table by applying 3 transformations (check the available [HiveQL string functions](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF#LanguageManualUDF-StringFunctions)):
    - Split `name` into `first_name` and `last_name`
    - Transform `certified` from `STRING` to `BOOLEAN`
    - Rename `location` to `address`
