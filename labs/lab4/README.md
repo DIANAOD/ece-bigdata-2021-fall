@@ -19,7 +19,7 @@ Using the official [Hive Data Definition Langage](https://cwiki.apache.org/confl
    ```sh
    export ece_group=1
    hdfs dfs -mkdir -p "/education/ece_2021_fall_bda_$ece_group/$USER/lab4"
-   hdfs dfs -cp /education/ece_2021_fall_bda_1/resources/lab4/nyc_drivers "/education/ece_2021_fall_bda_$ece_group/$USER/lab4/"
+   hdfs dfs -cp /education/ece_2021_fall_bda_$ece_group/resources/lab4/nyc_drivers "/education/ece_2021_fall_bda_$ece_group/$USER/lab4/"
    ```
 3. Open a Beeline session by typing `beeline`
 4. Create an external table targeting our data with this statement (to be completed, replace `YOUR_USERNAME`):
