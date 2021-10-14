@@ -25,7 +25,8 @@ Using the official [Hive Data Definition Langage](https://cwiki.apache.org/confl
 4. Create an external table targeting our data with this statement (to be completed, replace `YOUR_USERNAME`):
    ```sql
    SET hivevar:username=YOUR_USERNAME;
-   CREATE EXTERNAL TABLE ece_2021_fall_bda_1.${username}_nyc_drivers_ext (
+   SET hivevar:ece_group=1;
+   CREATE EXTERNAL TABLE ece_2021_fall_bda_${ece_group}.${username}_nyc_drivers_ext (
      driver_id INT,
      -- COMPLETE HERE
    )
