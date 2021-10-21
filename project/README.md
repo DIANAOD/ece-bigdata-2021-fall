@@ -37,6 +37,7 @@ Architecture/design:
 
 - Platforms: Hadoop, Elasticsearch, Kubernetes
 - Distributed storage systems: (HDFS), Rook, Ceph
+- Blockchain
 - Databases:
   - SQL: Hive, CockroachDB, Vitess
   - NoSQL: HBase, Cassandra, MongoDB, Neo4j
