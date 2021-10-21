@@ -41,7 +41,7 @@ Architecture/design:
 - Databases:
   - SQL: Hive, CockroachDB, Vitess
   - NoSQL: HBase, Cassandra, MongoDB, Neo4j
-- Distributed processing frameworks: Hive, Spark, Presto
+- Distributed processing frameworks: Hive, Presto
 - Messaging systems: Kafka, RabbitMQ
-- Stream processing engines: Spark, Flink, Kafka Streams
+- Stream processing engines: Flink, Kafka Streams
 - Dataflow systems: NiFi
