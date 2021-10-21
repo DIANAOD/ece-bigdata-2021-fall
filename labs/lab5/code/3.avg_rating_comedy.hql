@@ -1,9 +1,11 @@
+SET hivevar:ece_group=1;
+
 SELECT avg(averagerating) AS avg_rating
 FROM (
   SELECT
     tconst
-  FROM dsti_2021_fall_bda.imdb_title_basics
+  FROM ece_2021_fall_bda_${ece_group}.imdb_title_basics
   WHERE array_contains(genres, 'Comedy')
 ) titles
-JOIN dsti_2021_fall_bda.imdb_title_ratings ratings
+JOIN ece_2021_fall_bda_${ece_group}.imdb_title_ratings ratings
 ON titles.tconst = ratings.tconst;
